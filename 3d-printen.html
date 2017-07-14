@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Spaceprint</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link href="css/main.min.css" rel="stylesheet">
+  <link href="css/sweetalert.min.css" rel="stylesheet">
+  <link href="css/3dviewer.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/ico/favicon.ico">
+  <script src="js/sweetalert.min.js"></script>
+</head>
+<body>
+<header id="header">
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img width="60px" src="images/logo.png" alt="logo"></a><br/>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="over-ons.html">Over ons</a></li>
+                        <li><a href="spacemiller.html">Spacemiller</a></li>
+                        <li  class="active" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diensten <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="3d-printen.html" style="color:#fff">3D printen</a></li>
+                                <li><a href="3d-modelleren.html" style="color:#fff">3D modelleren</a></li>
+                                <li><a href="frezen.html" style="color:#fff">Frezen</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="creaties.html">Creaties</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <br/>
+            </div><!--/.container-->
+            <br/>
+        </nav><!--/nav-->
+    </header><!--/header-->
+    <br/><br/>
+    <section id="contact-page">
+
+    <div class="container">
+    <div class="center"><br/>
+    <h2>3D Printen</h2></div>
+        <div class="jumbotron">
+                <h4>Hoe u tewerk moet  gaan:</h4>
+                <label>Stap 1: Vul uw contactgegevens in<br/>
+                Stap 2: Laad uw 3D model <br/> Stap 3: Bevestig uw aanvraag</label>
+                <h5> Wij beantwoorden uw aanvraag zo snel mogelijk en geven informatie over de kostprijs. Vanaf het moment dat wij uw betaling ontvangen hebben, starten wij met printen</h5>
+        </div>
+        <form id="aanvraagformulier" method="post" enctype="multipart/form-data">
+            <div class="col-md-12"><br/>
+                <h2>Contactgegevens</h2><br/>
+                <div class="container-page">
+            <div class="col-md-6">
+
+                <div class="form-group col-lg-6">
+                    <label for="voornaam">Voornaam *</label>
+                    <input type="text" maxlength="50" id="voornaam" name="voornaam" class="form-control" required>
+                </div>
+
+                <div class="form-group col-lg-6">
+                    <label for="achternaam">Achternaam *</label>
+                    <input type="text" maxlength="50" id="achternaam" name="achternaam" class="form-control" required>
+                </div>
+
+                <div class="form-group col-lg-12">
+                    <label for="email">E-mailadres *</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group col-lg-12">
+                    <label for="telefoonnummer">Telefoonnummer</label>
+                    <input type="tel" pattern='[\+]\d{10,11}' title='Voorbeeld formaat: +321111111111' id="telefoonnummer" name="telefoonnummer" class="form-control">
+                </div>
+
+                <div class="form-group col-lg-6">
+                    <label for="straat">Adres *</label>
+                    <input type="text" maxlength="100" d="straat" name="straat" class="form-control" placeholder="Straat *" required>
+                </div>
+
+                <div class="form-group col-lg-3">
+                    <label>&nbsp;</label>
+                    <input type="number" name="nummer" class="form-control" placeholder="Nr *" required>
+                </div>
+                <div class="form-group col-lg-3">
+                    <label>&nbsp;</label>
+                    <input type="text" maxlength="10" name="bus" class="form-control" placeholder="Bus">
+                </div>
+                <div class="form-group col-lg-4">
+                    <input type="number" min="1000" max="9999" id="postcode" name="postcode" class="form-control" placeholder="Postcode *" required>
+                </div>
+                <div class="form-group col-lg-8">
+                    <input type="text" maxlength="50" d="stad" name="stad" class="form-control" placeholder="Stad *" required>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="message">Opmerkingen</label>
+                <textarea name="opmerkingen" maxlength="1000" id="message" class="form-control" rows="10" ></textarea>
+            </div>
+
+            <div class="col-md-6">
+
+            <div class="form-group col-md-6">
+                <label for="materiaal">Materiaal *</label><br/>
+                <select id="materiaal" name="materiaal" class="form-control">
+                    <option value="ABS">ABS</option>
+                    <option value="PLA">PLA</option>
+                    <option value="Woodfill">Woodfill</option>
+                </select>
+                <p class="help-block1">Info over materialen vind u <a href="#">hier</a></p>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="kleur">Kleur *</label><br/>
+                <select id="kleur" name="kleur" class="form-control">
+                    <option value="Grijs">Sparkling Grey</option>
+                    <option value="Zwart">Romantic Red</option>
+                    <option value="Blauw">Bold Blue</option>
+                    <option value="Groen">Glacious Green</option>
+                </select><br/>
+            </div><br/><br/>
+            </div>
+              <br/>
+            </div>
+        </div>
+        <p>&nbsp;</p><br/><h2> 3D-model(len)</h2><br/>
+        <div class="jumbotron">
+            <!-- Standar Form -->
+            <h4>Selecteer uw bestand</h4>
+            <label class="btn btn-primary" for="files">
+            <input type="file" name="bestand" id="files" enctype="multipart/form-data" required style="display:none;">
+                Browse
+            </label><br/></br/>
+            <span class='label label-default' id="upload-file-info"></span><br/><br/>
+            <label>Indien u het wenst, kunt u eveneens uw model <a href="#files" id="myBtn" >hier</a> in 3D bekijken!</label>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <iframe id="vs_iframe" src="stlviewer.html" style="border:0;width:100%;height:23em;"></iframe>
+                    <a id="viewerAfsluiter" class="btn btn-primary center-block">Afsluiten</a>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <button id="bevestigingbox" class="btn btn-primary center-block" type="submit">Aanvraag indienen</button>
+        <br/>
+    </form></section>
+
+<section id="bottom">
+        <div class="container wow fadeInDown">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-6">
+                    <div class="widget">
+                        <h3>Bedrijf</h3>
+                        <ul>
+                             <li><a href="over-ons.html">Ontmoet het team</a></li>
+                            <li><a href="FAQ.html">Veelgestelde vragen</a></li>
+                            <li><a href="contact.html">Contacteer ons</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+		<div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+                    &copy; <script language="javascript" type="text/javascript"> var today = new Date(); document.write(today.getFullYear()) </script>
+                    <a target="_blank" href="http://spaceprint.be/" title="Spaceprint">Spaceprint</a>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+                    <ul class="inline">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="over-ons.html">Over ons</a></li>
+                        <li><a href="contact.html">Contacteer ons</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="https://www.facebook.com/spaceprint.be"><i class="fa fa-facebook"></i></a></li>
+                            </ul>
+                       </div>
+                   </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/aantalkiezer.js"></script>
+    <script src="js/stappen.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var btnClose = document.getElementById("viewerAfsluiter");
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        btnClose.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+    <script>
+        var form = $('#aanvraagformulier');
+        $(document).ready(function () {
+            $(form).submit(function (e) {
+                e.preventDefault(); //prevent default form submit
+                var formData = new FormData(this);
+                    swal(  {
+                            title: 'Hartelijk bedankt!',
+                            text: 'We hebben uw aanvraag goed ontvangen en zullen u zo snel mogelijk contacteren',
+                            type: 'success',
+                            showCancelButton: false,
+                            closeOnConfirm: true,
+                            showLoaderOnConfirm: false,
+                            confirmButtonColor: "#1abc9c",
+                            buttonsStyling: false,
+                            }, function () {
+                                $.ajax({
+                                //Your validation
+                                type: 'POST',
+                                url: 'attachements.php',
+                                data: formData,
+                                async: true,
+                                success: function (data) {
+                                    location.reload();
+                                },
+                                cache: false,
+                                contentType: false,
+                                processData: false
+                            })});
+                    });
+            }
+        );
+        </script>
+        <script>
+            $(document).on('change', '#files', function() {
+                var input = $(this),
+                    numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                    label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+                input.trigger('fileselect', [numFiles, label]);
+            });
+
+            $(document).ready( function() {
+                $("#upload-file-info").html("...");
+                $('#files').on('fileselect', function(event, numFiles, label) {
+                    console.log(numFiles);
+                    console.log(label);
+                    $("#upload-file-info").html(label);
+                });
+            });
+        </script>
+</body>
+</html>
